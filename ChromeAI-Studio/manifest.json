@@ -1,0 +1,127 @@
+{
+  "manifest_version": 3,
+  "name": "ChromeAI Studio",
+  "version": "1.0.0",
+  "description": "Your Personal AI Workspace - Everywhere You Browse. Intelligent productivity assistant that adapts to your role as student, developer, creator, or researcher.",
+  
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "sidePanel",
+    "contextMenus",
+    "tabs"
+  ],
+  
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "constants.js",
+        "core/event-bus.js",
+        "utils/logger.js",
+        "utils/input-validator.js",
+        "utils/dom-utils.js",
+        "utils/content-extractor.js",
+        "utils/permission-manager.js",
+        "utils/settings-manager.js",
+        "utils/lottie-loader.js",
+        "utils/readability.js",
+        "utils/turndown.js", 
+        "utils/html-table-converter.js",
+        "utils/domain-filters.js",
+        "utils/url-to-markdown.js",
+        "content/context-analyzer.js",
+        "ai/api-wrapper.js",
+        "ai/ai-instance-manager.js",
+        "ai/mode-features.js",
+        "ai/browser-agent/enhanced-dom-extractor.js",
+        "ai/browser-agent/action-executor.js",
+        "ai/browser-agent/data-extractor.js",
+        "ai/browser-agent/agent-memory.js",
+        "ai/browser-agent/agent-progress-ui.js",
+        "ai/browser-agent/autonomous-agent.js",
+        "ai/mcp-voice-agent.js",
+        "ai/mcp-voice-interface.js",
+        "ai/advanced-mcp-tools.js",
+        "ai/proofreader-toggle.js",
+        "ui/theme-manager.js",
+        "ui/floating-action-bubble.js",
+        "ui/text-selection-menu-simple.js",
+        "ui/sidebar-ui-old.js",
+        "ui/sidebar-state.js",
+        "ui/sidebar-chat.js",
+        "ui/sidebar-settings.js",
+        "ui/sidebar-mentions.js",
+        "ui/sidebar-styles-old.js",
+        "ui/smart-sidebar-modular.js",
+        "services/ai-service.js",
+        "services/ui-service.js",
+        "content/main-unified.js"
+      ],
+      "css": [
+        "ui/styles/global.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+
+  "action": {
+    "default_title": "ChromeAI Studio",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "32": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon.png",
+    "32": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "ui/overlay/*",
+        "ui/styles/*",
+        "ui/components/*",
+        "icons/*",
+        "assets/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "commands": {
+    "toggle-sidebar": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "Command+Shift+A"
+      },
+      "description": "Toggle ChromeAI Studio sidebar"
+    },
+    "quick-action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Q",
+        "mac": "Command+Shift+Q"
+      },
+      "description": "Open quick action menu"
+    }
+  },
+
+  "minimum_chrome_version": "118"
+}

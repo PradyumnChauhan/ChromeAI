@@ -1,0 +1,47 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle that fills entire space -->
+  <circle cx="64" cy="64" r="64" fill="#4285F4"/>
+  
+  <!-- AI/Siri-like icon in the center -->
+  <circle cx="64" cy="64" r="45" fill="#FFFFFF" opacity="0.9"/>
+  
+  <!-- Central AI symbol -->
+  <g transform="translate(64, 64)">
+    <!-- Brain/AI symbol -->
+    <path d="M-15,-20 Q-25,-10 -25,0 Q-25,10 -15,20 Q-5,25 5,25 Q15,25 25,20 Q35,10 35,0 Q35,-10 25,-20 Q15,-25 5,-25 Q-5,-25 -15,-20 Z" fill="#4285F4"/>
+    
+    <!-- Neural network dots -->
+    <circle cx="-10" cy="-5" r="3" fill="#FFFFFF"/>
+    <circle cx="0" cy="-10" r="3" fill="#FFFFFF"/>
+    <circle cx="10" cy="-5" r="3" fill="#FFFFFF"/>
+    <circle cx="-5" cy="5" r="3" fill="#FFFFFF"/>
+    <circle cx="5" cy="5" r="3" fill="#FFFFFF"/>
+    
+    <!-- Connection lines -->
+    <line x1="-10" y1="-5" x2="0" y2="-10" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="0" y1="-10" x2="10" y2="-5" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="-10" y1="-5" x2="-5" y2="5" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="10" y1="-5" x2="5" y2="5" stroke="#FFFFFF" stroke-width="1.5"/>
+  </g>
+</svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

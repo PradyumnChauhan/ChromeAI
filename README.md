@@ -154,6 +154,7 @@ Mode is stored as `chromeai-active-mode` and broadcast via `window.postMessage` 
 2) Chrome → Extensions → Enable Developer mode → Load unpacked → select the project root
 3) Toggle with the action button or Ctrl/Cmd+Shift+A
 
+
 ### Judge Testing Instructions
 1) Load the extension, then visit any content‑heavy page.  
 2) If prompted, click "Enable AI" once to satisfy the on‑device model user‑gesture requirement.  
@@ -164,6 +165,7 @@ Mode is stored as `chromeai-active-mode` and broadcast via `window.postMessage` 
    - Enable Voice Mode → grant mic permission → ask a question → hear concise TTS.  
 5) If on Dev/Canary and the model is unavailable, enable flags in chrome://flags (Prompt API for Gemini Nano, Gemini Nano) and relaunch.  
 6) Troubleshoot via toasts; most errors include a retry/setup button.
+
 
 ### Troubleshooting
 - NotAllowedError (user gesture required): click once in the page or the "Enable AI" button; initialization will retry inside that gesture
